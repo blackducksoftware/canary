@@ -17,6 +17,16 @@ Run the replication controller :)
 kubectl create -f ./canary-rc.json
 ```
 
+the viper config info is printed to the logs.
+
+you only need to enter a json snippet of your services and 
+timeouts, and metrics will
+be generated for them.
+
+note that you only should run this to diagnose...
+in production, we will eventually enable a polling
+frequency config so it doesnt create a bunch of network traffic.
+
 # Using
 
 Go into your pod that is running, called hub-sidecar-, and run something like this:
